@@ -23,7 +23,7 @@ class Board
         @grid.each_with_index do |row, i|
             render_row = [i]
             row.each do |ele|
-                if ele.hide == true
+                if ele.visible?
                     render_row << ele + ' '
                 else
                     render_row << '? '

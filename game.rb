@@ -3,13 +3,13 @@ require_relative 'game.rb'
 
 class Game 
 
-    attr_accessor :board, :guessed_pos, :previous_guess
+    attr_accessor :board, :guessed_pos, :previous_guess, :play
 
     def initialize
         @board = Board.new
     end
 
-    def play
+    def self.play
         @board.populate
         until @board.won?
             sleep(3)
